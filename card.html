@@ -174,7 +174,7 @@
                                             <input class="col-12" required type="text" name="" id="discount_code1"
                                                 class="from-control font-weight-bold"
                                                 placeholder="Enter the discount code">
-                                            <small id="error_trw" class="text-dark mt-3">code is badbuddy</small>
+                                            <small id="error_trw" class="text-dark mt-3">code is Akash</small>
                                         </div>
                                         <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()"
                                             id="Applyt_btn">Apply</button>
@@ -218,65 +218,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 
-
+<script src="./card.js"></script>
 
     <script type="text/JavaScript">
-
-        var product_total_amt =document.getElementById('product_total_amt');
-var Shipping_charge =document.getElementById('Shipping_charge');
-var total_card_amt =document.getElementById('total_card_amt');
-
-
-        let decreaseNumber =(incdec,itemprice)=>{
-           var itemval = document.getElementById(incdec);
-        var itemprice = document.getElementById(itemprice);
-        // console.log(itemprice);
-            // console.log(itemval);
-            if(itemval.value <= 0){
-                itemval.value =0;
-            }else{
-                itemval.value = parseInt(itemval.value) - 1;
-                itemprice.innerHTML = parseInt(itemprice.innerHTML ) -20;
-                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML ) -20;
-                total_card_amt.innerHTML = parseInt(product_total_amt.innerHTML ) + parseInt(Shipping_charge.innerHTML );
-                itemval.style.background = "white";
-                itemval.style.color = "blue";
-            }
-        }
-
-        let increseNumber =(incdec,itemprice)=>{
-           var  itemval = document.getElementById(incdec);
-            var itemprice = document.getElementById(itemprice);
-            // console.log(itemval);
-            if(itemval.value >= 5){
-                itemval.value = 5;
-                alert("More then 5 not allowed");
-                itemval.style.background = "red";
-                itemval.style.color = "white";
-            }else{
-                itemval.value = parseInt(itemval.value) + 1;
-                itemprice.innerHTML = parseInt(itemprice.innerHTML ) +20;
-                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML ) +20;
-                total_card_amt.innerHTML = parseInt(product_total_amt.innerHTML ) + parseInt(Shipping_charge.innerHTML );
-            }
-        }
-
-var discountCode = document.getElementById('discount_code1');
-
-const discount_code1 = () =>{
-    var current = parseInt(total_card_amt.innerHTML);
-    var error_trw = document.getElementById('error_trw');
-if(discountCode == "akash"){
-    var newtotal = current -10 ;
-    total_card_amt.innerHTML = newtotal;
-}else{
-    error_trw.innerHTML= 'Code is invelid';
-    error_trw.style.background = "red";
-    error_trw.style.color = "white";
-}
-};
-
-
 
     </script>
 </body>
